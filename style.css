@@ -1,0 +1,52 @@
+/* Add your CSS styling here */
+/* You can style header, main, footer, book catalog, etc. */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+#book-catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.book {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.book img {
+    max-width: 100%;
+}
+
+.book-title {
+    font-weight: bold;
+}
+
+.book-author {
+    font-style: italic;
+}
