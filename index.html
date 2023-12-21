@@ -3,89 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decentralized Library App</title>
-    <style>
-        /* Add your CSS styling here */
-        /* You can style menus, buttons, forms, etc. */
-    </style>
+    <title>Decentralized Library</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div id="login-container">
-        <h1>Decentralized Library App</h1>
-        <form id="login-form">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <br>
-            <button type="submit">Login</button>
-        </form>
-    </div>
-    
-    <div id="menu-container" style="display: none;">
-        <!-- Menus and options will be displayed here -->
-    </div>
-
-    <script>
-        // JavaScript code goes here
-
-        const users = [
-            { username: "user1", password: "pass1", role: "Patron" },
-            { username: "user2", password: "pass2", role: "Librarian" },
-            { username: "user3", password: "pass3", role: "Admin" },
-        ];
-
-        // Sample functions for user authentication and role assignment
-        function authenticateUser(username, password) {
-            return users.find(user => user.username === username && user.password === password);
-        }
-
-        function assignRole(user) {
-            return user ? user.role : null;
-        }
-
-        // Sample menus
-        function displayPatronMenu() {
-            // Implement the Patron menu UI here
-        }
-
-        function displayLibrarianMenu() {
-            // Implement the Librarian menu UI here
-        }
-
-        function displayAdminMenu() {
-            // Implement the Admin menu UI here
-        }
-
-        // Sample event handler for login form submission
-        document.getElementById("login-form").addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
-
-            const user = authenticateUser(username, password);
-
-            if (user) {
-                const role = assignRole(user);
-
-                if (role === "Patron") {
-                    displayPatronMenu();
-                } else if (role === "Librarian") {
-                    displayLibrarianMenu();
-                } else if (role === "Admin") {
-                    displayAdminMenu();
-                }
-
-                // Hide the login container
-                document.getElementById("login-container").style.display = "none";
-                // Display the menu container
-                document.getElementById("menu-container").style.display = "block";
-            } else {
-                alert("Invalid username or password. Access denied.");
-            }
-        });
-    </script>
+    <header>
+        <h1>Welcome to the Decentralized Library</h1>
+    </header>
+    <main>
+        <section id="book-catalog">
+            <!-- Book catalog will be displayed here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Decentralized Library</p>
+    </footer>
+    <script src="app.js"></script>
 </body>
 </html>
+
